@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.omarcs.proyect.two.models.Item;
 import com.omarcs.proyect.two.models.Product;
 
-@Service
+@Service("serviceRestTemplate")
 public class ItemServiceImpl implements ItemService {
 	
 	@Autowired
