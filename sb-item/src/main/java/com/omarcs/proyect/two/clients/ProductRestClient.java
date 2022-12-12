@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.omarcs.proyect.two.models.Product;
 
-@FeignClient(name = "products-service", url = "localhost:8001")
+//@FeignClient(name = "products-service", url = "localhost:53267")
+@FeignClient(name = "products-service")
 public interface ProductRestClient {
 	
-	@GetMapping("/listAll")
+	@GetMapping("/list")
 	public List<Product> listAll();
 	
-	@GetMapping("/listId/{id}")
+	@GetMapping("/{id}")
 	public Product detail(@PathVariable Long id);
 }

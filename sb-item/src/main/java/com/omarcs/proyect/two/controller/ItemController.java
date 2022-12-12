@@ -15,7 +15,7 @@ import com.omarcs.proyect.two.service.ItemService;
 public class ItemController {
 	
 	@Autowired
-	@Qualifier("serviceRestTemplate")
+	@Qualifier("serviceFeign")  //Name of service that you want to use
 	private ItemService itemService;
 	
 	@GetMapping("/list")
