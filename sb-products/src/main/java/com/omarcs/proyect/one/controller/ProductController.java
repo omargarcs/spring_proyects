@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.omarcs.proyect.one.models.entity.Product;
 import com.omarcs.proyect.one.service.IProductService;
 
-@RestController
+@RestController //("product") - Definición de Endpoints
 public class ProductController {
 	
-	@Autowired
-	private IProductService productService;
+	@Autowired //Product p = new Product()
+	private IProductService productService; 
 	
 	
-	@GetMapping("/listAll")
+	@GetMapping("/list") //URL - Descriptor para encontrar un objeto
 	public List<Product> listAll(){
 		return productService.findAll();
 	}
 
-	@GetMapping("/listId/{id}")
+	@GetMapping("/{id}")
 	public Product detail(@PathVariable Long id){
 		return productService.findById(id);
 	}

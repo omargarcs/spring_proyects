@@ -20,7 +20,7 @@ public class ProductServiceImpl implements IProductService{
 	@Override
 	@Transactional(readOnly = true)
 	public List<Product> findAll() {
-		return (List<Product>)productRepository.findAll();
+		return productRepository.findAll();
 	}
  
 	@Override
